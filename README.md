@@ -46,3 +46,4 @@ The Modules are broken down into to components. The first being the set up for t
 
 ## _The Approach_
 In the diagram below, the approach to design was simple. The user group would be broken down into the iam_user module, which will create the user with default policies that enforces password security as well as setting up the PGP Key and SSH Public Key. 
+![alt text](https://github.com/JinZSu/Parsley-Health/edit/main/Design.PNG)
