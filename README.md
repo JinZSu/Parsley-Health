@@ -41,8 +41,8 @@ The Modules are broken down into to components. The first being the set up for t
 
 | Module | README | 
 | --- | ---| 
-| iam_user | README---|
-| iam_group | README ---|
+| iam_user | https://github.com/JinZSu/Parsley-Health/tree/main/modules/iam#readme |
+| iam_group | https://github.com/JinZSu/Parsley-Health/tree/main/modules/group_policy#readme |
 
 ## _The Approach_
 With the focus of 
@@ -59,10 +59,15 @@ number.
 
 (1) Resource
 
-The Design of this resource would be a DynamoDB table named Parsley with two attributes name Parsley-1 and Parsley 2. The code below is the design of such dynamoDB table.
+The Design of this resource would be a DynamoDB table named Parsley with two attributes name Parsley-1 and Parsley 2. The code below is the design of such dynamoDB table condition.
 
 ```sh
-(insert code)
+"Condition": {
+    "ForAllValues:StringEquals": {
+        "dynamodb:Attributes": [
+            Specific_key
+        ]
+    }
 ```
 
 The prompt presented was
@@ -74,11 +79,8 @@ possible.
 
 (2) Users [module.iam]
 
-The design was of the User module was crafted with the Security in mind. The module will have a default password policy:
-| Password_Policy | Description | 
-| --- | ---| 
-| iam_user | README---|
-| iam_group | README ---|
+The design was of the User module was crafted with the Security in mind. The module will have a default password policy that is set up to standard (my standards).
+
 The Module will also allow users to be created with or without a PGP KEY and/or a SSH Public Key. The Variables in this module are listed below:
 
 Now the focus is how do we enforce these permissions with the mindset of modularity? 
