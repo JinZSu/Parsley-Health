@@ -4,11 +4,16 @@
 
 | Topic | Summary | 
 | --- | ---| 
-| About Me | This Terraform IAM Design to in regards to the prompt presented by Parsley-Health|
+| [About Me](#https://github.com/JinZSu/Parsley-Health#about-me) | This Terraform IAM Design to in regards to the prompt presented by Parsley-Health|
+| [Requirements](#https://github.com/JinZSu/Parsley-Health#requirements) | Requirements to run|
+| [Modules](#https://github.com/JinZSu/Parsley-Health#modules) | The modules of iam_user and iam_group_policy |
+| [The Approach](#https://github.com/JinZSu/Parsley-Health#the-approach) | My approach to this infrastructure |
 
 
 ## _About ME_
-This Terraform IAM Design to in regards to the prompt presented by Parsley-Health. The prompt can be found in prompt As for the set up for localstack, the default ports were all at 4566!
+My design is based on the Principle of Least Privilege with two groups. The first group is called Developers and they have access to the resource with basic read and write permissions. The second group is called Viewers with limited read permissions. The resource that they are accessing is an dynamoDB.
+
+The prompt can be found in prompt folder. As for the set up in localstack, the default ports were all at 4566!
 
 ## _Requirements_ 
 | Requirement | Source | 
