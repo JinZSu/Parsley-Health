@@ -1,0 +1,33 @@
+module "iam_group_Viewer" {
+    source = "../../modules/group_policy"
+
+    group_name = "Viewer_group"
+
+    group_membership_name = "Viewer_group_membership"
+
+    users = [module.iam_user_Manger.iam_user_name]
+
+    policy_name = "Parsely-2_READER"
+
+    target_attribute = "Parsely-2"
+
+}
+
+
+module "iam_group_Developer" {
+    source = "../../modules/group_policy"
+
+    group_name = "Developer_group"
+
+    group_membership_name = "Developer_group_membership"
+
+    users = [
+        module.Manger_Brooklyn.iam_user_name
+    ]
+
+    policy_name = "Parsely_RW"
+
+    read = true
+    write = false
+
+}
