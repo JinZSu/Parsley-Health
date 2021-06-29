@@ -8,7 +8,7 @@
 
 
 ## _About ME_
-This Terraform IAM Design to in regards to the prompt presented by Parsley-Health. The prompt can be found in prompt.txt. As for the set up for localstack, the default ports were all at 4566!
+This Terraform IAM Design to in regards to the prompt presented by Parsley-Health. The prompt can be found in prompt As for the set up for localstack, the default ports were all at 4566!
 
 ## _Requirements_ 
 | Requirement | Source | 
